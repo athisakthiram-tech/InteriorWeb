@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Interiors business website
 
-## Getting Started
+Next.js (App Router) + TypeScript + Tailwind CSS. Static, no backend.
 
-First, run the development server:
+## Editing content
+
+Everything the client will want to change is in **`src/data/site.ts`**:
+
+- `site` — business name, owner, phone, WhatsApp number, email, address, stats
+- `images` — every photo URL in one place (Unsplash placeholders for now)
+- `services`, `projects`, `processSteps`, `reasons`, `testimonials`, `about`
+
+To use real project photos, put them in `public/projects/` and change the URL in
+`images` to e.g. `"/projects/whitefield-living.jpg"`.
+
+`phoneDigits` must be digits only with the country code (e.g. `919845012345`);
+it powers the WhatsApp button, the enquiry form and the call links.
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy to Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx vercel login        # first time only
+npx vercel              # preview deployment, accept the defaults
+npx vercel --prod       # production URL
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Sitemap, robots.txt and social previews pick up the Vercel production URL
+automatically. With a custom domain, set `NEXT_PUBLIC_SITE_URL` in the
+Vercel project settings (e.g. `https://www.example.in`).
 
-## Learn More
+## Fonts
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Cormorant Garamond and Manrope are self-hosted from `src/fonts/` (no Google
+Fonts request at runtime).

@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
+@theme {
+  /* Palette: charcoal, brass, walnut, lime-plaster off-white */
+  --color-charcoal: #262320;
+  --color-charcoal-soft: #34302c;
+  --color-ink: #2a2724;
+  --color-muted: #6b645b;
+  --color-plaster: #efece6;
+  --color-plaster-deep: #e5e0d7;
+  --color-stone: #d6cfc3;
+  --color-brass: #9c7643;
+  --color-brass-light: #cfae74;
+  --color-walnut: #4b3627;
+
+  --font-serif: var(--font-cormorant), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-plaster);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga";
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-brass-light);
+  color: var(--color-charcoal);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 3px;
+}
+
+.on-dark :focus-visible {
+  outline-color: var(--color-brass-light);
+}
+
+/* Headline type: Cormorant at display sizes */
+.display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+}
+
+/* Scroll reveal — subtle, and disabled for reduced motion */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 900ms var(--ease-out-soft),
+    transform 900ms var(--ease-out-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero headline — the one orchestrated moment */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-line {
+  display: block;
+  animation: rise 1100ms var(--ease-out-soft) both;
+}
+
+.hero-line:nth-child(2) {
+  animation-delay: 140ms;
+}
+
+.hero-fade {
+  animation: rise 1100ms var(--ease-out-soft) 380ms both;
+}
+
+@keyframes slow-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.hero-photo {
+  animation: slow-zoom 2600ms var(--ease-out-soft) both;
+}
+
+dialog::backdrop {
+  background: rgb(20 18 16 / 0.92);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-line,
+  .hero-fade,
+  .hero-photo {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
