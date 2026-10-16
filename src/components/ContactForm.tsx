@@ -91,7 +91,7 @@ export default function ContactForm() {
           name="message"
           rows={4}
           className={`${field} resize-y`}
-          placeholder="For example: 2BHK in Whitefield, kitchen and two wardrobes, possession in March"
+          placeholder="For example: new house in Rajapalayam, kitchen and two wardrobes, ready by March"
         />
       </label>
 

@@ -3,9 +3,9 @@ import ContactForm from "./ContactForm";
 import Reveal from "./Reveal";
 
 export default function Contact() {
-  const details = [
+  const details: { label: string; value: string; href?: string }[] = [
     { label: "Phone and WhatsApp", value: site.phoneDisplay, href: `tel:+${site.phoneDigits}` },
-    { label: "Email", value: site.email, href: `mailto:${site.email}` },
+    ...(site.email ? [{ label: "Email", value: site.email, href: `mailto:${site.email}` }] : []),
     { label: "Workshop and office", value: site.address },
     { label: "Hours", value: site.hours },
   ];

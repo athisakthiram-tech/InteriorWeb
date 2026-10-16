@@ -52,28 +52,28 @@ export const images = {
 
 /* ---------- Business details ---------- */
 export const site = {
-  name: "[Business Name]",
-  shortName: "[Business Name]",
-  owner: "[Owner Name]",
-  city: "Bengaluru",
-  serviceArea: "Bengaluru and nearby areas",
+  name: "AS Interiors",
+  shortName: "AS Interiors",
+  owner: "Ayyanar",
+  city: "Rajapalayam",
+  serviceArea: "Rajapalayam and nearby towns",
   // Shown on the page
-  phoneDisplay: "+91 00000 00000",
+  phoneDisplay: "+91 97896 72708",
   // Digits only, with country code — used for tel: and WhatsApp links
-  phoneDigits: "910000000000",
-  email: "hello@example.com",
-  address: "[Street address], Bengaluru, Karnataka [PIN]",
+  phoneDigits: "919789672708",
+  email: "", // add an email address here to show it on the site,
+  address: "Pudupalayam, Rajapalayam, Tamil Nadu 626117",
   // Search text used for the "Open in Google Maps" link
-  mapsQuery: "[Business Name], Bengaluru",
+  mapsQuery: "AS Interiors, Pudupalayam, Rajapalayam, Tamil Nadu 626117",
   hours: "Mon – Sat, 9:30 am – 7:00 pm",
   yearsExperience: "15+",
   projectsCompleted: "500+",
   happyClients: "450+",
-  foundedYear: 2010,
+  foundedYear: 2011,
   copyrightYear: 2026,
   tagline: "Interiors crafted to last",
   description:
-    "End-to-end home and office interiors, custom furniture, and gate and metal works in Bengaluru. Made by our own team, finished with care, priced fairly.",
+    "End-to-end home and office interiors, custom furniture, and gate and metal works in Rajapalayam and nearby towns. Made by our own team, finished with care, priced fairly.",
 };
 
 /* ---------- Navigation ---------- */
@@ -148,7 +148,7 @@ export const services: Service[] = [
     id: "gates",
     title: "Gate and metal works",
     summary:
-      "Fabricated gates, grills and railings with clean welds, proper rust treatment and finishes that hold up to Bengaluru monsoons.",
+      "Fabricated gates, grills and railings with clean welds, proper rust treatment and finishes that hold up to sun and monsoon rain.",
     includes: [
       "Main gates",
       "Window grills",
@@ -200,27 +200,27 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  { title: "3BHK living and dining", location: "Whitefield", category: "home", image: images.livingRoom, alt: "Bright living room with wooden accents", featured: true },
-  { title: "Corporate boardroom", location: "Koramangala", category: "office", image: images.conference, alt: "Boardroom with oval wooden table", featured: true },
-  { title: "Garden entrance gate", location: "JP Nagar", category: "gates", image: images.gateGarden, alt: "Black metal gate in a garden wall", featured: true },
-  { title: "Walnut-finish kitchen", location: "HSR Layout", category: "home", image: images.kitchen, alt: "Kitchen with wooden cabinets and island", featured: true },
-  { title: "Solid wood dining set", location: "Jayanagar", category: "furniture", image: images.diningSunlit, alt: "Wooden dining table in a sunlit room", featured: true },
-  { title: "Panelled master bedroom", location: "Hebbal", category: "home", image: images.bedroomPanelled, alt: "Bedroom with wood panelled walls", featured: true },
-  { title: "Studio reception", location: "Indiranagar", category: "office", image: images.reception, alt: "Wooden reception desk in an office", featured: true },
-  { title: "Steel staircase railing", location: "Sarjapur Road", category: "gates", image: images.railing, alt: "Black metal staircase with steel railings", featured: true },
-  { title: "Two-seater sofa and table", location: "Malleswaram", category: "furniture", image: images.sofa, alt: "Grey sofa beside a wooden coffee table", featured: true },
-  { title: "Villa lounge and ceiling", location: "Devanahalli", category: "home", image: images.lounge, alt: "Lounge with chandeliers and false ceiling" },
-  { title: "Wardrobe and dresser wall", location: "Bannerghatta Road", category: "home", image: images.wardrobe, alt: "Room with built-in cupboards and a bench" },
-  { title: "Walk-in closet", location: "Yelahanka", category: "home", image: images.walkInCloset, alt: "Walk-in closet with mirror and stool" },
-  { title: "TV and display unit", location: "Electronic City", category: "home", image: images.tvUnit, alt: "Room with TV unit and open shelves" },
-  { title: "Family room sectional", location: "Banashankari", category: "furniture", image: images.sectional, alt: "Living room with grey sectional sofa" },
-  { title: "Platform bed", location: "Rajajinagar", category: "furniture", image: images.bedFrame, alt: "Wooden bed frame in a bedroom" },
-  { title: "Founder's workspace", location: "MG Road", category: "office", image: images.officeDesk, alt: "Office desk with dual monitors" },
-  { title: "Glass-front meeting room", location: "Bellandur", category: "office", image: images.conferenceGlass, alt: "Conference room with street-facing glass" },
-  { title: "Office lobby", location: "Outer Ring Road", category: "office", image: images.lobby, alt: "Lobby with stone floors and greenery" },
-  { title: "Twin-leaf main gate", location: "Basavanagudi", category: "gates", image: images.gateWhite, alt: "White and black metal gate" },
-  { title: "Independent house gate", location: "Vijayanagar", category: "gates", image: images.gateHouse, alt: "White house with a black metal gate" },
-  { title: "Wrought iron detail gate", location: "Frazer Town", category: "gates", image: images.gateOrnate, alt: "Ornate wrought iron gate" },
+  { title: "3BHK living and dining", location: "Rajapalayam", category: "home", image: images.livingRoom, alt: "Bright living room with wooden accents", featured: true },
+  { title: "Corporate boardroom", location: "Sivakasi", category: "office", image: images.conference, alt: "Boardroom with oval wooden table", featured: true },
+  { title: "Garden entrance gate", location: "Srivilliputhur", category: "gates", image: images.gateGarden, alt: "Black metal gate in a garden wall", featured: true },
+  { title: "Walnut-finish kitchen", location: "Rajapalayam", category: "home", image: images.kitchen, alt: "Kitchen with wooden cabinets and island", featured: true },
+  { title: "Solid wood dining set", location: "Tenkasi", category: "furniture", image: images.diningSunlit, alt: "Wooden dining table in a sunlit room", featured: true },
+  { title: "Panelled master bedroom", location: "Sankarankovil", category: "home", image: images.bedroomPanelled, alt: "Bedroom with wood panelled walls", featured: true },
+  { title: "Studio reception", location: "Virudhunagar", category: "office", image: images.reception, alt: "Wooden reception desk in an office", featured: true },
+  { title: "Steel staircase railing", location: "Rajapalayam", category: "gates", image: images.railing, alt: "Black metal staircase with steel railings", featured: true },
+  { title: "Two-seater sofa and table", location: "Srivilliputhur", category: "furniture", image: images.sofa, alt: "Grey sofa beside a wooden coffee table", featured: true },
+  { title: "Villa lounge and ceiling", location: "Madurai", category: "home", image: images.lounge, alt: "Lounge with chandeliers and false ceiling" },
+  { title: "Wardrobe and dresser wall", location: "Rajapalayam", category: "home", image: images.wardrobe, alt: "Room with built-in cupboards and a bench" },
+  { title: "Walk-in closet", location: "Sattur", category: "home", image: images.walkInCloset, alt: "Walk-in closet with mirror and stool" },
+  { title: "TV and display unit", location: "Sivakasi", category: "home", image: images.tvUnit, alt: "Room with TV unit and open shelves" },
+  { title: "Family room sectional", location: "Rajapalayam", category: "furniture", image: images.sectional, alt: "Living room with grey sectional sofa" },
+  { title: "Platform bed", location: "Tenkasi", category: "furniture", image: images.bedFrame, alt: "Wooden bed frame in a bedroom" },
+  { title: "Founder's workspace", location: "Rajapalayam", category: "office", image: images.officeDesk, alt: "Office desk with dual monitors" },
+  { title: "Glass-front meeting room", location: "Madurai", category: "office", image: images.conferenceGlass, alt: "Conference room with street-facing glass" },
+  { title: "Office lobby", location: "Virudhunagar", category: "office", image: images.lobby, alt: "Lobby with stone floors and greenery" },
+  { title: "Twin-leaf main gate", location: "Rajapalayam", category: "gates", image: images.gateWhite, alt: "White and black metal gate" },
+  { title: "Independent house gate", location: "Sankarankovil", category: "gates", image: images.gateHouse, alt: "White house with a black metal gate" },
+  { title: "Wrought iron detail gate", location: "Srivilliputhur", category: "gates", image: images.gateOrnate, alt: "Ornate wrought iron gate" },
 ];
 
 /* ---------- Process ---------- */
@@ -271,21 +271,21 @@ export const reasons = [
 export const testimonials = [
   {
     quote:
-      "They did our full 3BHK, kitchen to wardrobes, and finished a week before our griha pravesha. The finish on the shutters is still perfect two years on.",
+      "They did our full 3BHK, kitchen to wardrobes, and finished a week before our housewarming. The finish on the shutters is still perfect two years on.",
     name: "Sample Client A",
-    detail: "Home interiors, Whitefield",
+    detail: "Home interiors, Rajapalayam",
   },
   {
     quote:
       "Our office was ready in five weeks with the work done mostly at night, so we never had to shut down. Clean site, clear updates.",
     name: "Sample Client B",
-    detail: "Office interiors, Koramangala",
+    detail: "Office interiors, Sivakasi",
   },
   {
     quote:
       "The main gate and balcony railings are solid and the paint has held up through two monsoons. The quote matched the final bill exactly.",
     name: "Sample Client C",
-    detail: "Gate and railings, JP Nagar",
+    detail: "Gate and railings, Srivilliputhur",
   },
 ];
 
@@ -293,7 +293,7 @@ export const testimonials = [
 export const about = {
   heading: "A workshop first, a design studio second",
   paragraphs: [
-    `${site.owner} started ${site.name} in ${site.foundedYear} as a small carpentry workshop in Bengaluru. Word spread through families and offices who wanted interiors that looked good on the day of handover and still looked good years later.`,
+    `${site.owner} started ${site.name} in ${site.foundedYear} as a small carpentry workshop in Rajapalayam. Word spread through families and offices who wanted interiors that looked good on the day of handover and still looked good years later.`,
     "Today the company handles everything from a single wardrobe to complete homes, offices, furniture and metal works. The approach has not changed: our own team, honest material choices, and a price that is fair for the quality.",
   ],
   signoff: `${site.owner}, Founder`,
