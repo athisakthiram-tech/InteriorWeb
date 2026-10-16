@@ -4,7 +4,10 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   images: {
-    remotePatterns: [new URL("https://images.unsplash.com/**")],
+    remotePatterns: [
+      // Unsplash photo URLs carry query params (?auto=format&w=...), so search is left open.
+      { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
+    ],
     qualities: [75, 80],
     formats: ["image/avif", "image/webp"],
   },
